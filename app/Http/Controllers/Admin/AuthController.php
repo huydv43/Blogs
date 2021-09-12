@@ -50,7 +50,7 @@ class AuthController extends Controller
             if (!$token = auth()->attempt($validator->validated())) {
                 return response()->json([
                     'success' => 'false',
-                    'message' => 'Login credentials are invalid.',
+                    'message' => 'Thông tin đăng nhập không chính xác!',
                 ], 401);
             }
         } catch (ValidationException $e) {
