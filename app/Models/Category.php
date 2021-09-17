@@ -9,6 +9,10 @@ class Category extends Model
 {
     use HasFactory;
 
+    public static function orderBy($string, $string1)
+    {
+    }
+
     public function posts()
     {
         return $this->hasMany(Post::class, 'category_id');
